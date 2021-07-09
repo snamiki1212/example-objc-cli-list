@@ -30,9 +30,11 @@
     [output appendString: @"\n"];
     
     // loop
+    NSUInteger idx = 0;
     for (Contact *item in self.list ) {
-        NSString *line = [[NSString alloc] initWithFormat:@"name: %@, email: %@\n", item.fullname, item.email];
+        NSString *line = [[NSString alloc] initWithFormat:@"%lu: <%@> (%@)\n", (unsigned long)idx, item.fullname, item.email];
         [output appendString: line];
+        idx++;
     }
     return output;
 }

@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
         // append example list
         Contact *dummyContact1 = [[Contact alloc] initWithName:@"John" andEmail:@"john@corner.stone"];
         [contacts addContact: dummyContact1];
-        Contact *dummyContact2 = [[Contact alloc] initWithName:@"taro" andEmail:@"taro@corner.stone"];
+        Contact *dummyContact2 = [[Contact alloc] initWithName:@"Taro" andEmail:@"taro@corner.stone"];
         [contacts addContact: dummyContact2];
         
         while(true) {
