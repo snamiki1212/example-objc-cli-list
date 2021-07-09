@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
         ContactList *contacts = [ContactList new];
         InputCollector *ic = [InputCollector new];
         
-        Contact *dummyContact = [Contact new];
+        Contact *dummyContact = [[Contact alloc] initWithName:@"John" andEmail:@"john@corner.stone"]; // TODO: 
         [contacts addContact: dummyContact];
         
         while(true) {
@@ -25,11 +25,7 @@ int main(int argc, const char * argv[]) {
             if([menuInput isEqualToString:@"quit"]) break;
             
             if([menuInput isEqualToString:@"list"]) {
-                
-//                NSString *output = [NSString new];
-                
-//                output stringByAppendingString:
-                NSLog(@"%@", contacts);
+                NSLog(@"%@", [contacts show]);
                 continue;
             }
             

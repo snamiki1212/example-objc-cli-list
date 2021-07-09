@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ContactList : NSObject
 @property NSMutableArray<Contact *> *list;
 - (void) addContact: (Contact *) newContact;
+- (NSString *) show;
 @end
 
 NS_ASSUME_NONNULL_END
