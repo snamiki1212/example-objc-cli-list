@@ -7,14 +7,17 @@
 
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
+#import "ContactList.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-        NSString *usernameInput = [InputCollector inputForPrompt:@"Enter your username"];
+        ContactList *contacts = [ContactList new];
+        InputCollector *ic = [InputCollector new];
         
-        NSLog(@"%@", usernameInput);
+        while(true) {
+            NSString *usernameInput = [ic inputForPrompt:@"Enter your username"];
+            NSLog(@"%@", usernameInput);
+        }
     }
     
     

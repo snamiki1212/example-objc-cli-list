@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface InputCollector : NSObject
-+ (NSString *) inputForPrompt:(NSString *) promptString;
+- (NSString *) inputForPrompt:(NSString *) promptString;
 + (NSString *) parseStr: (NSString *) str;
 @end
 

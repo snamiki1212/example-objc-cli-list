@@ -9,7 +9,7 @@
 
 @implementation InputCollector
 
-+ (NSString *) inputForPrompt:(NSString *)promptString {
+- (NSString *) inputForPrompt:(NSString *)promptString {
     NSLog(@"%@", promptString);
     
     char inputChars[255];
@@ -18,6 +18,8 @@
     NSString *parsedStr = [InputCollector parseStr:inputString];
     
     if([parsedStr isEqualToString:@"quit"]) exit(0);
+    if([parsedStr isEqualToString:@"new"]) exit(0);
+        
         
     return parsedStr;
 }
