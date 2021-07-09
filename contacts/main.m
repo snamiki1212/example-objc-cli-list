@@ -16,9 +16,12 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         ContactList *contacts = [ContactList new];
         InputCollector *ic = [InputCollector new];
-        
-        Contact *dummyContact = [[Contact alloc] initWithName:@"John" andEmail:@"john@corner.stone"]; // TODO: 
-        [contacts addContact: dummyContact];
+
+        // append example list
+        Contact *dummyContact1 = [[Contact alloc] initWithName:@"John" andEmail:@"john@corner.stone"];
+        [contacts addContact: dummyContact1];
+        Contact *dummyContact2 = [[Contact alloc] initWithName:@"taro" andEmail:@"taro@corner.stone"];
+        [contacts addContact: dummyContact2];
         
         while(true) {
             NSString *menuInput = [ic inputForPrompt: MENU_DESCRIPTION];
