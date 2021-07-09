@@ -17,10 +17,6 @@
     NSString *inputString = [NSString stringWithCString:inputChars encoding:(NSUTF8StringEncoding)];
     NSString *parsedStr = [InputCollector parseStr:inputString];
     
-    if([parsedStr isEqualToString:@"quit"]) exit(0);
-    if([parsedStr isEqualToString:@"new"]) exit(0);
-        
-        
     return parsedStr;
 }
 
